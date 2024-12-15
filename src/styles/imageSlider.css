@@ -1,0 +1,87 @@
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(0) rotateX(-90deg) skewX(-90deg);
+  }
+  5% {
+    transform: translateX(-5%);
+  }
+  20% {
+    transform: translateX(-20%);
+  }
+  80% {
+    transform: translateX(-80%);
+  }
+  95% {
+    transform: translateX(-95%);
+  }
+  100% {
+    transform: translateX(-100%) rotateX(90deg) skewX(80deg);
+  }
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5%) translateX(-20%);
+  }
+  50% {
+    transform: translateY(10%) translateX(20%);
+  }
+  75% {
+    transform: translateY(20%) translateX(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes upAndDown2 {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(20%) translateX(10%) rotateZ(-10deg);
+  }
+  50% {
+    transform: translateY(10%) translateX(-20%) rotateZ(10deg);
+  }
+  75% {
+    transform: translateY(30%) translateX(10%) rotateZ(-10deg);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes upAndDown3 {
+  0% {
+    transform: translateY(0) rotateX(-90deg);
+  }
+  10% {
+    transform: translateY(20%);
+  }
+  50% {
+    transform: translateY(0%) rotateZ(-10deg);
+  }
+  90% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%) rotateX(90deg);
+  }
+}
+
+.animate {
+  animation: rightToLeft 40s linear infinite;
+}
+
+.animate2:nth-child(3n) {
+  animation: upAndDown 10s ease-in-out infinite;
+}
+.animate2:nth-child(3n + 1) {
+  animation: upAndDown2 12s ease-in-out infinite;
+}
+
+.animate2:nth-child(3n + 2) {
+  animation: upAndDown3 14s ease-in-out infinite;
+}

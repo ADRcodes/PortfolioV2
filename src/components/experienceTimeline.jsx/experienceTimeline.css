@@ -1,0 +1,66 @@
+/* ============= WAVE BACKGROUND ============= */
+.wave-bg {
+  background: linear-gradient(to bottom, #93c5fd 30%, #bfdbfe 80%);
+  opacity: 0.2;
+  animation: waveFloat 8s ease-in-out infinite alternate;
+}
+
+/* Subtle wave / float animation */
+@keyframes waveFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+/* ============= TIMELINE LINE ============= */
+.timeline-container {
+  position: relative;
+}
+.timeline-line {
+  width: 4px;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+/* ============= TIMELINE ANIMATION ============= */
+/* fadeInUp keyframe */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* ============= TIMELINE DOT ============= */
+.timeline-dot {
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.3); /* ring effect */
+}
+
+/* ============= TIMELINE CARD ============= */
+.timeline-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Clear floats so each item is stacked properly */
+.timeline-item {
+  clear: both;
+}
