@@ -1,10 +1,29 @@
+import { useEffect, useState } from 'react'
 import './StickyTop.css'
 
 const StickyTop = () => {
+
+  const [isVisible, setIsVisible] = useState(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsVisible(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div className='sticky-container'>
       <div className='sticky-top relative'>Alex Russell
-        <p className='absolute text-black bottom-3 tracking-normal text-base font-extralight '>Scroll Down</p>
+
+        {isVisible && (
+          <p className='scroll-down absolute text-gray-500 bottom-3 tracking-normal text-base font-extralight '>Scroll Down</p>
+        )}
       </div>
       <div className="navbar">
         <img className="nav-logo" src='src/assets/images/PixelProfile2.jpg' alt='Logo' />
@@ -22,7 +41,7 @@ const StickyTop = () => {
           </div>
           <a
             href="#contact"
-            className="nav-item py-2 px-4 border border-blue-600 text-blue-600 font-semibold rounded hover:bg-blue-600 hover:text-white transition"
+            className="nav-item py-1 px-4 border border-blue-500 text-blue-500 font-semibold rounded hover:bg-blue-500 hover:text-white transition"
           >
             Contact
           </a>

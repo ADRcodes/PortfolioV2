@@ -3,8 +3,31 @@ import InstagramIcon from "../assets/SVGs/InstagramIcon"
 import LinkedInIcon from "../assets/SVGs/LinkedInIcon"
 import SneakyBtn from "./SneakyBtn"
 
+import { useRef } from "react"
+import emailjs from "@emailjs/browser"
+
 
 const Contact = () => {
+
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm('service_119lqg7', 'template_f8d6noz', form.current, {
+        publicKey: '_rSpqJBYqopPqe0dz',
+      })
+      .then(
+        () => {
+          alert('Message sent successfully!')
+        },
+        (error) => {
+          console.log('Oops! Failed...', error.text)
+        },
+      )
+  }
+
   return (
     <div id="contact" className="flex flex-col items-center justify-center m-4 py-20">
       <div className="flex justify-center items-end">
@@ -22,13 +45,13 @@ const Contact = () => {
           <img className="w-[300px]" src="src/assets/images/profilepic1.png" alt="" />
         </div>
       </div>
-      <form className="flex bg-slate-100 flex-col transition-all duration-500 shadow-md hover:shadow-xl items-center justify-center p-4 rounded-2xl">
+      <form ref={form} onSubmit={sendEmail} className="flex bg-slate-100 flex-col transition-all duration-500 shadow-md hover:shadow-xl items-center justify-center p-4 rounded-2xl">
         <div className="flex gap-4">
           <div className="flex flex-col p-8 pb-0 gap-4">
             <label htmlFor="name">Name:</label>
-            <input className="rounded-2xl py-2 px-4" type="text" id="name" name="name" />
+            <input className="rounded-2xl py-2 px-4" type="text" id="name" name="user_name" />
             <label htmlFor="email">Email:</label>
-            <input className="rounded-2xl py-2 px-4" type="email" id="email" name="email" />
+            <input className="rounded-2xl py-2 px-4" type="email" id="email" name="user_email" />
           </div>
           <div className="flex flex-col p-8 pb-0 gap-2">
             <label htmlFor="message">Message:</label>
@@ -38,7 +61,7 @@ const Contact = () => {
 
 
         {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button> */}
-        <SneakyBtn text="Send Message" link="/" />
+        <SneakyBtn text="Send Message" link="#" />
       </form>
     </div>
   )

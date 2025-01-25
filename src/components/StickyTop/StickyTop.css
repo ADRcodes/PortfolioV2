@@ -45,6 +45,15 @@
   gap: 1em;
 }
 
+.scroll-down {
+  position: absolute;
+  opacity: 0;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-down 4s 5s linear infinite;
+}
+
 
 
 
@@ -68,14 +77,7 @@
   animation-range: 70vh 110vh;
 }
 
-@keyframes navSlideDown {
-  from {
-    transform: translateY(-200%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
+
 
 @keyframes stickyTop {
   from {
@@ -95,5 +97,35 @@
     font-size: calc(1.2em);
     letter-spacing: normal;
     line-height: 1;
+  }
+}
+
+@keyframes navSlideDown {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hide-scroll-down {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

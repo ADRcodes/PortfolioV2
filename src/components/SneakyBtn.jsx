@@ -69,7 +69,8 @@ const SneakyBtn = ({ text, link }) => {
           className="px-4 py-2 bg-blue-500 text-white font-medium rounded-lg h-min transition-transform duration-300 ease-out"
           style={{ transform: `translate(${btnPosition.x - initialPos.x}px, ${btnPosition.y - initialPos.y}px)` }}
         >
-          {text}
+          {/* {text} */}
+          <input type="submit" value={text} />
         </a>
         {/* <p className="absolute bottom-0 right-0 bg-gray-400">
           Idle: {mouseIdle ? "True" : "False"}<br />
