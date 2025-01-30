@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './StickyTop.css'
+import Nav from '../Nav'
 
 const StickyTop = () => {
 
@@ -25,8 +26,8 @@ const StickyTop = () => {
           <p className='scroll-down absolute text-gray-500 bottom-3 tracking-normal text-base font-extralight '>Scroll Down</p>
         )}
       </div>
-      <div className="navbar">
-        <img className="nav-logo" src='src/assets/images/PixelProfile2.jpg' alt='Logo' />
+      {/* <div className="navbar">
+        <img className="nav-logo" src='images/PixelProfile2.jpg' alt='Logo' />
         <div className="nav-container relative">
           <div className="nav-item relative group inline-block">
             <button
@@ -34,7 +35,6 @@ const StickyTop = () => {
             >
               Blog
             </button>
-            {/* Tooltip - hidden by default, appears on hover */}
             <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 p-2 bg-black text-white text-xs rounded hidden group-hover:block">
               Coming soon
             </div>
@@ -47,7 +47,8 @@ const StickyTop = () => {
           </a>
 
         </div>
-      </div>
+      </div> */}
+      <Nav />
     </div>
   )
 }

@@ -42,11 +42,11 @@ const Contact = () => {
           </div>
         </div>
         <div>
-          <img className="w-[300px]" src="src/assets/images/profilepic1.png" alt="" />
+          <img className="w-[300px] hidden md:block " src="images/profilepic1.png" alt="" />
         </div>
       </div>
       <form ref={form} onSubmit={sendEmail} className="flex bg-slate-100 flex-col transition-all duration-500 shadow-md hover:shadow-xl items-center justify-center p-4 rounded-2xl">
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-col md:flex-row">
           <div className="flex flex-col p-8 pb-0 gap-4">
             <label htmlFor="name">Name:</label>
             <input className="rounded-2xl py-2 px-4" type="text" id="name" name="user_name" />

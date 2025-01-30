@@ -3,14 +3,14 @@
 }
 
 .sticky-top {
-  background-image: url("src/assets/images/portfolioBG.png");
+  background-image: url("images/portfolioBG.png");
   background-size: cover;
   background-position: 50% 0;
   background-color: transparent; 
   background-blend-mode: multiply;
   position: fixed;
   text-wrap: nowrap;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
   -webkit-background-clip: text;
@@ -31,7 +31,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   color: white;
   padding: 0 2em;
   z-index: 11;

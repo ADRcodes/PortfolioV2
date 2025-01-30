@@ -9,7 +9,7 @@ const Projects = () => {
       link: "https://clients-live-site.com",
       badges: ["Paid Project", "WordPress"],
       techStack: ["WordPress", "PHP"],
-      image: "src/assets/images/TOLscreenshot.png"
+      image: "images/TOLscreenshot.png"
     },
     {
       title: "ERCO Homes Clone",
@@ -18,14 +18,14 @@ const Projects = () => {
       githubLink: "https://github.com/ADRcodes/erco-homes-copy",
       badges: ["Personal", "No Frameworks"],
       techStack: ["HTML", "CSS", "JavaScript"],
-      image: "src/assets/images/ErcoWebsitePic.png"
+      image: "images/ErcoWebsitePic.png"
     },
     {
       title: "Movie Night",
       description: "A passion project for organizing watchlists and discovering new films. Currently WIP.",
       badges: ["In Progress", "React"],
       techStack: ["React", "Vite", "Tailwind"],
-      image: "src/assets/images/movie-site-screenshot.png"
+      image: "images/movie-site-screenshot.png"
     },
     {
       title: "Portfolio Site",
@@ -34,7 +34,7 @@ const Projects = () => {
       githubLink: "",
       badges: ["Personal", "React"],
       techStack: ["React", "Tailwind"],
-      image: "src/assets/images/portfolio-screenshot.png"
+      image: "images/portfolio-screenshot.png"
     }
   ];
 

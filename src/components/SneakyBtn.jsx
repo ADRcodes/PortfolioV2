@@ -64,7 +64,7 @@ const SneakyBtn = ({ text, link }) => {
 
   return (
     <div className="flex justify-center">
-      <div className="btn-container relative w-[300px] h-[300px] flex justify-center items-center ">
+      <div className="btn-container relative p-8 md:p-2 md:w-[300px] md:h-[300px] flex justify-center items-center ">
         <a href={link}
           className="px-4 py-2 bg-blue-500 text-white font-medium rounded-lg h-min transition-transform duration-300 ease-out"
           style={{ transform: `translate(${btnPosition.x - initialPos.x}px, ${btnPosition.y - initialPos.y}px)` }}
