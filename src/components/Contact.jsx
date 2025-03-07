@@ -61,7 +61,7 @@ const Contact = () => {
 
 
         {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button> */}
-        <SneakyBtn text="Send Message" link="#" />
+        <SneakyBtn text="Send Message..." link="#" />
       </form>
     </div>
   )
