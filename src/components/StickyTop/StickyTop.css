@@ -3,7 +3,7 @@
 }
 
 .sticky-top {
-  background-image: url("images/portfolioBG.png");
+  background-image: url("https://s3.us-east-1.amazonaws.com/www.alexrussell.info/images/portfolioBG.png");
   background-size: cover;
   background-position: 50% 0;
   background-color: transparent; 
@@ -16,7 +16,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /* color: white; */
   display: flex;
   justify-content: center;
   align-items: center;
