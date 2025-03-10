@@ -1,5 +1,5 @@
 import React from 'react';
-import './ExperienceTimeline.css';
+import './experienceTimeline.css';
 
 const ExperienceTimeline = () => {
   const experiences = [

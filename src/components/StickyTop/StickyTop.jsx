@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './StickyTop.css'
+import './stickyTop.css'
 import Nav from '../Nav'
 
 const StickyTop = () => {
