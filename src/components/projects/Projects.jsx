@@ -1,6 +1,7 @@
 import Project from '../project/Project';
 import './projects.css';
 
+
 const Projects = () => {
   const projects = [
     {

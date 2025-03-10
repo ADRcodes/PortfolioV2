@@ -1,5 +1,6 @@
 import './project.css';
 
+
 const Project = ({ title, description, link, githubLink, badges = [], techStack = [], image }) => {
   if (!image) {
     image = 'https://picsum.photos/300/300';

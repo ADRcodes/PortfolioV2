@@ -2,6 +2,7 @@
   /* Start off invisible and animate upwards */
   opacity: 0;
   animation: fadeUp 0.8s ease forwards;
+  
 }
 
 /* Stagger the delay for each card */
