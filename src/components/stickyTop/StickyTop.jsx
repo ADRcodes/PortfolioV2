@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './stickyTop.css'
 import Nav from '../Nav'
 
+
 const StickyTop = () => {
 
   const [isVisible, setIsVisible] = useState(true)
