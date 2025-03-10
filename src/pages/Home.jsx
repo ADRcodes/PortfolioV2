@@ -5,6 +5,7 @@ import Projects from "../components/projects/Projects"
 import StickyTop from "../components/stickyTop/StickyTop"
 
 
+
 const Home = () => {
   return (
     <div>
