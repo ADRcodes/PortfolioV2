@@ -9,19 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm'  # Speeds up installs by caching dependencies
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Dependencies
+        run: npm ci  # More reliable than npm install
 
-      - name: Build the project
+      - name: Build the Project
         run: npm run build
+
+      - name: List Build Directory (Debugging)
+        run: ls -R dist  # Verify build files exist
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -30,5 +34,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Deploy static site to S3 bucket
+      - name: Deploy Static Site to S3 Bucket
         run: aws s3 sync ./dist s3://www.alexrussell.info --delete
+
+      - name: Invalidate CloudFront Cache
+        run: aws cloudfront create-invalidation --distribution-id E2IJYG6SCPF50B --paths "/*"
