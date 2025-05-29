@@ -1,0 +1,65 @@
+/* File: animatedNavBar/animatedNavBar.css */
+
+/* The container grows/shrinks in height (100vh -> 60px) */
+.navbar-container {
+  width: 100%;
+  position: relative;
+  /* This ensures we push content down; the rest of the page sits below it */
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5); /* optional overlay style */
+  z-index: 100; /* Keep it on top */
+}
+
+/* The inner content is absolutely positioned so we can place elements freely */
+.navbar-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* fills the container’s dynamic height */
+  display: flex;
+  flex-direction: column; /* so the top is at the top, etc. */
+}
+
+/* LOGO: placed at the top-left corner */
+.navbar-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* NAV ITEMS: placed at the top-right corner */
+.navbar-items {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Each nav item transitions in with a slight delay (set inline) */
+.nav-item {
+  color: white;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* The big text for "Alex Russell" – background-clip trick for the image behind letters */
+.navbar-header-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: transparent;
+  background-image: url('/images/portfolioBG.png');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
+
+  /* Some transitions for smoother changes in font-size/letterSpacing/top */
+  transition:
+    font-size 0.1s linear,
+    letter-spacing 0.1s linear,
+    top 0.1s linear;
+}

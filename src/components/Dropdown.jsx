@@ -34,26 +34,25 @@ export default function Dropdown({ items = [] }) {
 
       {/* Drop-down Menu */}
       <div
-        className={`absolute right-0 mt-2 rounded-md bg-slate-600 shadow-md 
-          transition-all duration-300 ease-in-out 
+        className={`absolute right-0 mt-2 rounded-md bg-teal-700/50 shadow-md transition-all duration-300 ease-in-out 
           ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"}`}
       >
-        <ul className="py-2 px-0 m-0">
-          {items.map(({ label, link }, index) => (
-            <li
+        <div className="flex flex-col p-0 m-0">
+          {items.map(({ label, link, comingSoon }, index) => (
+            <a
               key={index}
-              className="px-4 py-2 hover:bg-gray-400 cursor-pointer"
+              href={link}
+              className={`px-4 py-2 rounded-md transition-colors duration-500 hover:bg-teal-600  ${comingSoon ? 'cursor-not-allowed text-slate-300' : 'text-white'}`}
             >
-              {/* 
-                If you want a clickable link, you can use an <a> tag for external links 
-                OR a <Link> (from React Router) for internal navigation. 
-              */}
-              <a href={link} className="text-white block">
-                {label}
-              </a>
-            </li>
+              {label}
+            </a>
           ))}
-        </ul>
+          <a
+            href="#contact"
+            className="px-4 py-2 rounded-md text-white transition-colors duration-500 hover:bg-teal-600 cursor-pointer">
+            Contact
+          </a>
+        </div>
       </div>
     </div>
   );
