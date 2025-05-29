@@ -2,7 +2,7 @@
 
 const About = () => {
   return (
-    <section className="flex items-center pt-2 md:pt-10 pb-2">
+    <section className="flex items-center pt-2 md:pt-10 pb-10">
       <div className="container mx-auto px-4 md:px-8 grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Column: Text Content */}
         <div className="space-y-6">
@@ -31,7 +31,7 @@ const About = () => {
           <div className="flex space-x-4">
             <a
               href="#projects"
-              className="btn-primary"
+              className="btn-primary bg-teal-700 text-white hover:bg-teal-600 transition px-4 py-2 rounded-md"
             >
               View My Work
             </a>

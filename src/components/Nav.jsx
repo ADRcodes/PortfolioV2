@@ -6,9 +6,9 @@ const Nav = ({ menuItems }) => {
   return (
     <div>
 
-      <div className="w-full h-[48px] fixed flex justify-center items-center  bg-teal-700/30 backdrop-blur-md px-4 z-20">
+      <div className="w-full h-[48px] fixed flex justify-center items-center  bg-teal-700/30 backdrop-blur-md z-20">
         {/* Desktop Nav (hidden on small screens) */}
-        <div className="flex relative w-full max-w-[1216px] justify-between items-center gap-4 px-4">
+        <div className="flex relative w-full max-w-[1216px] justify-between items-center gap-4 mx-4 md:mx-8">
           <div className="flex items-center gap-2">
             <a href="#">
               <img className="w-[40px] h-[40px] rounded-full" src="images/PixelProfile2.jpg" alt="Logo" />
